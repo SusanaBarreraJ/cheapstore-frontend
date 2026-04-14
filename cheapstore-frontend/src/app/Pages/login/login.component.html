@@ -1,0 +1,50 @@
+<div class="container">
+
+  <!-- IZQUIERDA: IMAGEN -->
+  <div class="left">
+    <img src="assets/login-illustration.svg" alt="login" />
+  </div>
+
+  <!-- DERECHA: FORM -->
+  <div class="right">
+
+    <div class="card">
+
+      <h2>Iniciar sesión</h2>
+
+      <p class="error" *ngIf="errorMsg">
+        {{ errorMsg }}
+      </p>
+
+      <input
+        type="email"
+        [(ngModel)]="email"
+        placeholder="Email"
+      />
+
+      <div class="password-box">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          [(ngModel)]="password"
+          placeholder="Contraseña"
+        />
+
+        <span class="eye material-icons" (click)="showPassword = !showPassword">
+          {{ showPassword ? 'visibility_off' : 'visibility' }}
+        </span>
+      </div>
+
+      <button class="btn-login" (click)="login()">
+        Ingresar
+      </button>
+
+      <p class="register">
+        ¿No tienes una cuenta?
+        <a href="#">Regístrate</a>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

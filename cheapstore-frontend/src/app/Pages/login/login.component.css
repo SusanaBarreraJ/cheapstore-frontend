@@ -1,0 +1,143 @@
+.container {
+  height: 100vh;
+  display: flex;
+  background: #f4f6fb;
+}
+
+/* IZQUIERDA */
+.left {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* DERECHA */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.card {
+  width: 350px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card h2 {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* INPUTS */
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+/* PASSWORD */
+.password-box {
+  position: relative;
+  width: 100%;
+}
+
+.password-box input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 45px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  background: transparent;
+}
+
+.eye:hover {
+  opacity: 1;
+}
+
+.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* BOTÓN */
+.btn-login {
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background: #4338ca;
+}
+
+/* LINK */
+.register {
+  text-align: center;
+  font-size: 14px;
+}
+
+.register a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    flex: none;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+}
